@@ -28,9 +28,10 @@ describe("<GridContainer />", () => {
     });
 
     it('renders expected children', () => {
-        const children = fakeJSXElement();
-        const wrapper = enzyme.shallow(<GridContainer>{fakeJSXElement()}</GridContainer>);
-        console.log(wrapper);
-        // expect(wrapper)();
+        const children = fakeGrid().children;
+        const wrapper = enzyme.shallow(<GridContainer>{children}</GridContainer>);
+        
+        expect(wrapper.find("WithStyles(ForwardRef(Grid))").prop("children")).toBeTruthy();
+        expect(wrapper.find("WithStyles(ForwardRef(Grid))").prop("children")).toEqual(children)
     });
 })
