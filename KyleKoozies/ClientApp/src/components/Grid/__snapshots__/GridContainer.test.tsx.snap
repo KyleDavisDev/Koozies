@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GridContainer /> matches snapshot 1`] = `
+<WithStyles(ForwardRef(Grid))
+  className="makeStyles-grid-1 undefined"
+  container={true}
+>
+  <div
+    key="36d1a0b1-8b20-477b-8c04-b270f5533ca7"
+  >
+    aliquid molestiae assumenda laboriosam temporibus odit dignissimos
+  </div>
+</WithStyles(ForwardRef(Grid))>
+`;
