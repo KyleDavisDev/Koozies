@@ -34,4 +34,14 @@ describe("<GridContainer />", () => {
         expect(wrapper.find("WithStyles(ForwardRef(Grid))").prop("children")).toBeTruthy();
         expect(wrapper.find("WithStyles(ForwardRef(Grid))").prop("children")).toEqual(children)
     });
+    
+    it("includes expected className when provided", () => {
+        new Array(15).fill(null).forEach(() => {
+            const {className, children} = fakeGrid();
+            const wrapper = enzyme.shallow(<GridContainer className={className}>{children}</GridContainer>);
+            
+            
+            expect(wrapper.prop("className")).toContain(className);
+        });
+    })
 })
