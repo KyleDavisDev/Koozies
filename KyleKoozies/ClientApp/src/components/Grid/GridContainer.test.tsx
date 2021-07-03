@@ -3,6 +3,7 @@ import * as enzyme from 'enzyme';
 import casual from 'casual'
 import GridContainer, {IGridContainerProps} from './GridContainer';
 
+casual.seed(15);
 const fakeJSXElement = (): JSX.Element => {
     return casual.random_element([
         React.createElement("div", { key: casual.uuid }, casual.string),
@@ -19,5 +20,17 @@ describe("<GridContainer />", () => {
     it('renders without crashing', () => {
         const wrapper = enzyme.shallow(<GridContainer>{fakeJSXElement()}</GridContainer>);
         expect(wrapper).toBeTruthy();
-    });    
+    });
+    
+    it('matches snapshot', () => {
+        const wrapper = enzyme.shallow(<GridContainer>{fakeJSXElement()}</GridContainer>);
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    it('renders expected children', () => {
+        const children = fakeJSXElement();
+        const wrapper = enzyme.shallow(<GridContainer>{fakeJSXElement()}</GridContainer>);
+        console.log(wrapper);
+        // expect(wrapper)();
+    });
 })
