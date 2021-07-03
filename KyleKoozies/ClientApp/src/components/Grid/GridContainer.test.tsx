@@ -17,8 +17,7 @@ const fakeGrid = (): IGridContainerProps => ({
 
 describe("<GridContainer />", () => {
     it('renders without crashing', () => {
-        const wrapper = enzyme.shallow(<GridContainer><p>hi</p></GridContainer>);
-        console.log(wrapper);
+        const wrapper = enzyme.shallow(<GridContainer>{fakeJSXElement()}</GridContainer>);
         expect(wrapper).toBeTruthy();
     });    
 })
