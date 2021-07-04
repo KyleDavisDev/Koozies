@@ -7,7 +7,8 @@ import {
   Hidden,
   AppBar,
   Button,
-  Toolbar
+  Toolbar,
+  Menu
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -62,10 +63,10 @@ const Header: React.FC<IHeaderProps> = props => {
   };
 
   return (
-    <AppBar className={appBarClasses}>
+    <AppBar className={classes.appBar}>
       <Toolbar className={classes.container}>
         <Button className={classes.title}>
-          <Link to="/">{brand}</Link>
+          <Link to="/">Koozies!</Link>
         </Button>
         <Hidden smDown implementation="css">
           <div className={classes.collapse}>{links}</div>
@@ -76,7 +77,7 @@ const Header: React.FC<IHeaderProps> = props => {
             aria-label="open drawer"
             onClick={handleDrawerToggle}
           >
-            <Menu />
+            <Menu open={true}/>
           </IconButton>
         </Hidden>
       </Toolbar>
