@@ -1,8 +1,6 @@
 ﻿import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
-// nodejs library to set properties for components
-import PropTypes from "prop-types";
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -35,17 +33,20 @@ export interface ICustomButton {
     | "reddit"
     | "instagram"
     | "transparent";
-  size: "sm" | "lg";
-  simple: boolean;
-  round: boolean;
-  fullWidth: boolean;
-  disabled: boolean;
-  block: boolean;
-  link: boolean;
-  justIcon: boolean;
-  fileButton: boolean;
-  children: Node;
+  size?: "sm" | "lg";
+  simple?: boolean;
+  round?: boolean;
+  fullWidth?: boolean;
+  disabled?: boolean;
+  block?: boolean;
+  link?: boolean;
+  justIcon?: boolean;
+  fileButton?: boolean;
+  children?: any;
   className: string;
+  onClick?: ((event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void);
+  href?: string;
+  target?: "_blank" | "self"
 }
 
 const CustomButton = React.forwardRef<HTMLButtonElement, ICustomButton>((props, ref) => {
@@ -56,7 +57,7 @@ const CustomButton = React.forwardRef<HTMLButtonElement, ICustomButton>((props, 
     fullWidth,
     disabled,
     simple,
-    size,
+    size = "sm",
     block,
     link,
     justIcon,
