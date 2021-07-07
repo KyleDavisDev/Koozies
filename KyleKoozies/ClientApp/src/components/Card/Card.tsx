@@ -16,13 +16,10 @@ export interface ICard {
   className: string;
   plain?: boolean;
   profile?: boolean;
-  blog?: boolean;
   raised?: boolean;
   background?: boolean;
   pricing?: boolean;
-  testimonial?: boolean;
   color: "primary" | "info" | "success" | "warning" | "danger" | "rose";
-
   product?: boolean;
   children: Element | JSX.Element | Array<Element | JSX.Element>;
 }
@@ -33,13 +30,11 @@ const Card: React.FC<ICard> = (props) => {
     children,
     plain,
     profile,
-    blog,
     raised,
     background,
     pricing,
     color,
     product,
-    testimonial,
     ...rest
   } = props;
   
@@ -47,8 +42,7 @@ const Card: React.FC<ICard> = (props) => {
   const cardClasses = classNames({
     [classes.card]: true,
     [classes.cardPlain]: plain,
-    [classes.cardProfile]: profile || testimonial,
-    [classes.cardBlog]: blog,
+    [classes.cardProfile]: profile,
     [classes.cardRaised]: raised,
     [classes.cardBackground]: background,
     [classes.cardPricingColor]:
