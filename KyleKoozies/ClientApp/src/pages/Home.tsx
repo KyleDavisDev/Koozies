@@ -1,29 +1,18 @@
-﻿/*eslint-disable*/
-import React from "react";
-// nodejs library that concatenates classes
+﻿import React from "react";
 import classNames from "classnames";
-// core components
+import { makeStyles } from "@material-ui/core/styles";
+import { List, ListItem } from "@material-ui/core";
+
 import Header from "../components/Header/Header";
 import GridContainer from "../components/GridContainer/GridContainer";
 import GridItem from "../components/GridItem/GridItem";
 import Parallax from "../components/Parallax/Parallax";
-import Button from "../components/CustomButton/CustomButton";
-import Card from "../components/Card/Card";
-import CardBody from "../components/Card/CardBody";
-import CustomInput from "../components/CustomInput/CustomInput";
 import Footer from "../components/Footer/Footer";
-// sections for this page
-import HeaderLinks from "../components/Header/HeaderLinks.js";
+
 import SectionLatestOffers from "views/EcommercePage/Sections/SectionLatestOffers.js";
 import SectionProducts from "views/EcommercePage/Sections/SectionProducts.js";
 import SectionBlog from "views/EcommercePage/Sections/SectionBlog.js";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import InputAdornment from "@material-ui/core/InputAdornment";
-// @material-ui icons
-import Mail from "@material-ui/icons/Mail";
+
 
 import ecommerceHeader from "assets/img/examples/ecommerce-header.jpg";
 import face1 from "assets/img/faces/card-profile6-square.jpg";
@@ -39,7 +28,6 @@ import styles from "assets/jss/material-kit-pro-react/views/ecommerceStyle.js";
 
 const useStyles = makeStyles(styles);
 
-
 export interface IHome {};
 
 const Home: React.FC<IHome> = (props) => {
@@ -54,7 +42,6 @@ const Home: React.FC<IHome> = (props) => {
     <div>
       <Header
         brand="Material Kit PRO React"
-        links={<HeaderLinks dropdownHoverColor="info" />}
         fixed
         color="transparent"
         changeColorOnScroll={{
@@ -95,67 +82,7 @@ const Home: React.FC<IHome> = (props) => {
         <SectionProducts />
       </div>
       <SectionBlog />
-      <div
-        className={classNames(
-          classes.subscribeLine,
-          classes.subscribeLineImage
-        )}
-        style={{ backgroundImage: `url(${ecommerceHeader})` }}
-      >
-        <div className={classes.container}>
-          <GridContainer>
-            <GridItem
-              xs={12}
-              sm={6}
-              md={6}
-              className={classNames(classes.mlAuto, classes.mrAuto)}
-            >
-              <div className={classes.textCenter}>
-                <h3 className={classes.title}>Subscribe to our Newsletter</h3>
-                <p className={classes.description}>
-                  Join our newsletter and get news in your inbox every week! We
-                  hate spam too, so no worries about this.
-                </p>
-              </div>
-              <Card raised className={classes.card}>
-                <CardBody className={classes.cardBody}>
-                  <form>
-                    <GridContainer>
-                      <GridItem xs={12} sm={6} md={6} lg={8}>
-                        <CustomInput
-                          id="emailPreFooter"
-                          formControlProps={{
-                            fullWidth: true,
-                            className: classes.cardForm,
-                          }}
-                          inputProps={{
-                            startAdornment: (
-                              <InputAdornment position="start">
-                                <Mail />
-                              </InputAdornment>
-                            ),
-                            placeholder: "Your Email...",
-                          }}
-                        />
-                      </GridItem>
-                      <GridItem xs={12} sm={6} md={6} lg={4}>
-                        <Button
-                          color="rose"
-                          block
-                          className={classes.subscribeButton}
-                        >
-                          subscribe
-                        </Button>
-                      </GridItem>
-                    </GridContainer>
-                  </form>
-                </CardBody>
-              </Card>
-            </GridItem>
-          </GridContainer>
-        </div>
-      </div>
-
+      
       <Footer
         theme="dark"
         content={
