@@ -6,4 +6,4 @@
   },
 };
 
-export default GriContainerdStyles
+export default GridContainerStyles
