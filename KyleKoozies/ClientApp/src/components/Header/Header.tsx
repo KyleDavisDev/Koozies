@@ -1,15 +1,7 @@
 ﻿import * as React from "react";
 import { Link } from "react-router-dom";
 import { Close } from "@material-ui/icons";
-import {
-  Drawer,
-  IconButton,
-  Hidden,
-  AppBar,
-  Button,
-  Toolbar,
-  Menu
-} from "@material-ui/core";
+import { Drawer, IconButton, Hidden, AppBar, Button, Toolbar, Menu } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 import Links from "./components/Links/Links";
@@ -19,32 +11,13 @@ import HeaderStyles from "./HeaderStyles";
 const useStyles = makeStyles(HeaderStyles);
 
 export interface IHeaderProps {
-  color:
-    | "primary"
-    | "info"
-    | "success"
-    | "warning"
-    | "danger"
-    | "transparent"
-    | "white"
-    | "rose"
-    | "dark";
-  links: any;
+  color: "primary" | "info" | "success" | "warning" | "danger" | "transparent" | "white" | "rose" | "dark";
   brand?: string;
   fixed?: boolean;
   absolute?: boolean;
   changeColorOnScroll: {
     height: number;
-    color:
-      | "primary"
-      | "info"
-      | "success"
-      | "warning"
-      | "danger"
-      | "transparent"
-      | "white"
-      | "rose"
-      | "dark";
+    color: "primary" | "info" | "success" | "warning" | "danger" | "transparent" | "white" | "rose" | "dark";
   };
 }
 
@@ -72,19 +45,11 @@ const Header: React.FC<IHeaderProps> = props => {
 
     const windowsScrollTop = window.pageYOffset;
     if (windowsScrollTop > changeColorOnScroll.height) {
-      document.body
-        .getElementsByTagName("header")[0]
-        .classList.remove(classes[color]);
-      document.body
-        .getElementsByTagName("header")[0]
-        .classList.add(classes[changeColorOnScroll.color]);
+      document.body.getElementsByTagName("header")[0].classList.remove(classes[color]);
+      document.body.getElementsByTagName("header")[0].classList.add(classes[changeColorOnScroll.color]);
     } else {
-      document.body
-        .getElementsByTagName("header")[0]
-        .classList.add(classes[color]);
-      document.body
-        .getElementsByTagName("header")[0]
-        .classList.remove(classes[changeColorOnScroll.color]);
+      document.body.getElementsByTagName("header")[0].classList.add(classes[color]);
+      document.body.getElementsByTagName("header")[0].classList.remove(classes[changeColorOnScroll.color]);
     }
   };
 
@@ -98,11 +63,7 @@ const Header: React.FC<IHeaderProps> = props => {
           <div className={classes.collapse}>{<Links />}</div>
         </Hidden>
         <Hidden mdUp>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerToggle}
-          >
+          <IconButton color="inherit" aria-label="open drawer" onClick={handleDrawerToggle}>
             <Menu open={true} />
           </IconButton>
         </Hidden>
