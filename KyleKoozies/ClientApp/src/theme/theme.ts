@@ -175,7 +175,7 @@ const container = {
 
 const card = {
   display: "inline-block",
-  position: "relative",
+  position: "relative" as "relative",
   width: "100%",
   margin: "25px 0",
   boxShadow: "0 1px 4px 0 rgba(" + hexToRgb(blackColor) + ", 0.14)",
@@ -356,8 +356,8 @@ const cardSubtitle = {
 
 const main = {
   background: whiteColor,
-  position: "relative",
-  zIndex: "3",
+  position: "relative" as "relative",
+  zIndex: 3,
 };
 
 const mainRaised = {
@@ -425,11 +425,11 @@ const coloredShadow = {
   transform: "scale(0.94)",
   top: "12px",
   filter: "blur(12px)",
-  position: "absolute",
+  position: "absolute" as "absolute",
   width: "100%",
   height: "100%",
   backgroundSize: "cover",
-  zIndex: "-1",
+  zIndex: -1,
   transition: "opacity .45s",
   opacity: "0",
 };

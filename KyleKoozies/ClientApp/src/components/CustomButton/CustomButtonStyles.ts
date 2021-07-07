@@ -47,8 +47,7 @@ const ButtonStyle = {
     textTransform: "uppercase" as "uppercase",
     letterSpacing: "0",
     willChange: "box-shadow, transform",
-    transition:
-      "box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+    transition: "box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
     lineHeight: "1.42857143",
     textAlign: "center" as "center",
     whiteSpace: "nowrap" as "nowrap",
@@ -90,7 +89,7 @@ const ButtonStyle = {
       "& .fab,& .fas,& .far,& .fal,& .material-icons": {
         marginTop: "0px",
         marginRight: "0px",
-        position: "absolute",
+        position: "absolute" as "absolute",
         width: "100%",
         transform: "none",
         left: "0px",

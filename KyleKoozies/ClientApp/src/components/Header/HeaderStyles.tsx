@@ -37,14 +37,14 @@ const HeaderStyles = theme => createStyles({
     alignItems: "center",
     flexFlow: "row nowrap",
     justifyContent: "flex-start",
-    position: "relative",
+    position: "relative" as "relative",
   },
   absolute: {
-    position: "absolute",
+    position: "absolute" as "absolute",
     top: "auto",
   },
   fixed: {
-    position: "fixed",
+    position: "fixed" as "fixed",
   },
   container: {
     ...container,
@@ -172,7 +172,7 @@ const HeaderStyles = theme => createStyles({
     transitionTimingFunction: "linear, linear, ease",
     width: drawerWidth,
     ...boxShadow,
-    position: "fixed",
+    position: "fixed" as "fixed",
     display: "block",
     top: "0",
     height: "100vh",
@@ -203,7 +203,7 @@ const HeaderStyles = theme => createStyles({
     alignItems: "center",
   },
   closeButtonDrawer: {
-    position: "absolute",
+    position: "absolute" as "absolute",
     right: "8px",
     top: "9px",
     zIndex: 1,

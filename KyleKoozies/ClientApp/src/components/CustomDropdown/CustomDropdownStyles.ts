@@ -25,7 +25,7 @@ const customDropdownStyle = (theme) => ({
   },
   popperNav: {
     [theme.breakpoints.down("sm")]: {
-      position: "static !important",
+      position: "static !important" as "static",
       left: "unset !important",
       top: "unset !important",
       transform: "none !important",
@@ -89,8 +89,8 @@ const customDropdownStyle = (theme) => ({
   popperResponsive: {
     zIndex: 1200,
     [theme.breakpoints.down("sm")]: {
-      zIndex: "1640",
-      position: "static",
+      zIndex: 1640,
+      position: "static" as "static",
       float: "none",
       width: "auto",
       marginTop: "0",
