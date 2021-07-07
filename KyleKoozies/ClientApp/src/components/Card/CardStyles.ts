@@ -1,7 +1,6 @@
 ﻿import {
   blackColor,
   whiteColor,
-  grayColor,
   roseColor,
   primaryColor,
   successColor,
@@ -39,13 +38,12 @@ const CardStyle = {
       display: "inline-block !important"
     }
   },
+  cardProduct: {
+    marginTop: "30px",
+  },
   cardPlain: {
     background: "transparent",
     boxShadow: "none"
-  },
-  cardProfile: {
-    marginTop: "30px",
-    textAlign: "center" as "center"
   },
   cardRaised: {
     boxShadow:
@@ -83,61 +81,6 @@ const CardStyle = {
     "& small": {
       color: "rgba(" + hexToRgb(whiteColor) + ", 0.7) !important"
     }
-  },
-  cardPricing: {
-    textAlign: "center" as "center",
-    "&:after": {
-      backgroundColor: "rgba(" + hexToRgb(blackColor) + ", 0.7) !important"
-    },
-    "& ul": {
-      listStyle: "none",
-      padding: 0,
-      maxWidth: "240px",
-      margin: "10px auto"
-    },
-    "& ul li": {
-      color: grayColor[0],
-      textAlign: "center" as "center",
-      padding: "12px 0px",
-      borderBottom: "1px solid rgba(" + hexToRgb(grayColor[0]) + ",0.3)"
-    },
-    "& ul li:last-child": {
-      border: 0
-    },
-    "& ul li b": {
-      color: grayColor[1]
-    },
-    "& h1": {
-      marginTop: "30px"
-    },
-    "& h1 small": {
-      display: "inline-flex",
-      height: 0,
-      fontSize: "18px"
-    },
-    "& h1 small:first-child": {
-      position: "relative" as "relative",
-      top: "-17px",
-      fontSize: "26px"
-    },
-    "& ul li svg,& ul li . as g,& ul li .fab,& ul li .fas,& ul li .far,& ul li .fal,& ul li .material-icons":
-      {
-        
-        top: "7px"
-      }
-  },
-  cardPricingColor: {
-    "& ul li": {
-      color: whiteColor,
-      borderColor: "rgba(" + hexToRgb(whiteColor) + ",0.3)",
-      "& b, & svg,& .fab,& .fas,& .far,& .fal,& .material-icons": {
-        color: whiteColor,
-        fontWeight: "700",
-      },
-    },
-  },
-  cardProduct: {
-    marginTop: "30px"
   },
   primary: {
     background:

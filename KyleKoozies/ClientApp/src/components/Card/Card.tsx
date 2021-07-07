@@ -15,10 +15,8 @@ const useStyles = makeStyles(CardStyles);
 export interface ICard {
   className: string;
   plain?: boolean;
-  profile?: boolean;
   raised?: boolean;
   background?: boolean;
-  pricing?: boolean;
   color: "primary" | "info" | "success" | "warning" | "danger" | "rose";
   product?: boolean;
   children: Element | JSX.Element | Array<Element | JSX.Element>;
@@ -29,10 +27,8 @@ const Card: React.FC<ICard> = (props) => {
     className,
     children,
     plain,
-    profile,
     raised,
     background,
-    pricing,
     color,
     product,
     ...rest
@@ -42,13 +38,9 @@ const Card: React.FC<ICard> = (props) => {
   const cardClasses = classNames({
     [classes.card]: true,
     [classes.cardPlain]: plain,
-    [classes.cardProfile]: profile,
     [classes.cardRaised]: raised,
     [classes.cardBackground]: background,
-    [classes.cardPricingColor]:
-      (pricing && color !== undefined) || (pricing && background !== undefined),
     [classes[color]]: color,
-    [classes.cardPricing]: pricing,
     [classes.cardProduct]: product,
     [className]: className !== undefined
   });
