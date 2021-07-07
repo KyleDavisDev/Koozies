@@ -12,14 +12,40 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-import Links from "./components/Links/Links"
+import Links from "./components/Links/Links";
 
 import HeaderStyles from "./HeaderStyles";
+
 const useStyles = makeStyles(HeaderStyles);
 
 export interface IHeaderProps {
-  changeColorOnScroll?: { height: number; scrollColor: string };
-  color: string;
+  color:
+    | "primary"
+    | "info"
+    | "success"
+    | "warning"
+    | "danger"
+    | "transparent"
+    | "white"
+    | "rose"
+    | "dark";
+  links: any;
+  brand?: string;
+  fixed?: boolean;
+  absolute?: boolean;
+  changeColorOnScroll: {
+    height: number;
+    color:
+      | "primary"
+      | "info"
+      | "success"
+      | "warning"
+      | "danger"
+      | "transparent"
+      | "white"
+      | "rose"
+      | "dark";
+  };
 }
 
 const Header: React.FC<IHeaderProps> = props => {
@@ -36,30 +62,29 @@ const Header: React.FC<IHeaderProps> = props => {
       }
     };
   });
-  
+
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  
+
   const headerColorChange = () => {
     const { color, changeColorOnScroll } = props;
-    const { height, scrollColor = color } = changeColorOnScroll || {};    
 
     const windowsScrollTop = window.pageYOffset;
-    if (height && windowsScrollTop > height) {
+    if (windowsScrollTop > changeColorOnScroll.height) {
       document.body
         .getElementsByTagName("header")[0]
         .classList.remove(classes[color]);
       document.body
         .getElementsByTagName("header")[0]
-        .classList.add(classes[scrollColor]);
+        .classList.add(classes[changeColorOnScroll.color]);
     } else {
       document.body
         .getElementsByTagName("header")[0]
         .classList.add(classes[color]);
       document.body
         .getElementsByTagName("header")[0]
-        .classList.remove(classes[scrollColor]);
+        .classList.remove(classes[changeColorOnScroll.color]);
     }
   };
 
@@ -78,7 +103,7 @@ const Header: React.FC<IHeaderProps> = props => {
             aria-label="open drawer"
             onClick={handleDrawerToggle}
           >
-            <Menu open={true}/>
+            <Menu open={true} />
           </IconButton>
         </Hidden>
       </Toolbar>
@@ -106,3 +131,5 @@ const Header: React.FC<IHeaderProps> = props => {
     </AppBar>
   );
 };
+
+export default Header;
