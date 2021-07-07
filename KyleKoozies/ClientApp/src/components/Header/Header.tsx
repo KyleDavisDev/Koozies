@@ -12,8 +12,9 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-import HeaderStyles from "./HeaderStyles";
+import Links from "./components/Links/Links"
 
+import HeaderStyles from "./HeaderStyles";
 const useStyles = makeStyles(HeaderStyles);
 
 export interface IHeaderProps {
@@ -69,7 +70,7 @@ const Header: React.FC<IHeaderProps> = props => {
           <Link to="/">Koozies!</Link>
         </Button>
         <Hidden smDown implementation="css">
-          <div className={classes.collapse}>{links}</div>
+          <div className={classes.collapse}>{<Links />}</div>
         </Hidden>
         <Hidden mdUp>
           <IconButton
@@ -99,7 +100,7 @@ const Header: React.FC<IHeaderProps> = props => {
           >
             <Close />
           </IconButton>
-          <div className={classes.appResponsive}>{links}</div>
+          <div className={classes.appResponsive}>{<Links />}</div>
         </Drawer>
       </Hidden>
     </AppBar>
