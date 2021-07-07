@@ -6,7 +6,7 @@ import ParallaxStyles from "./ParallaxStyles";
 const useStyles = makeStyles(ParallaxStyles);
 
 export interface IParallax {
-  className: string;
+  className?: string;
   filter:
     | "primary"
     | "rose"
@@ -15,8 +15,8 @@ export interface IParallax {
     | "success"
     | "warning"
     | "danger";
-  children: Node;
-  style: object;
+  children: Element | JSX.Element | Array<Element | JSX.Element>;
+  style?: object;
   image: string;
   small: boolean;
 }
@@ -49,7 +49,7 @@ const Parallax: React.FC<IParallax> = (props) => {
     setTransform("translate3d(0," + windowScrollTop + "px,0)");
   };
 
-  const { filter, className, children, style, image, small } = props;
+  const { filter, className = "", children, style, image, small } = props;
   
   const classes = useStyles();
   const parallaxClasses = classNames({

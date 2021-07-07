@@ -6,7 +6,7 @@ import GridItemStyles from "./GridItemStyles";
 const useStyles = makeStyles(GridItemStyles);
 
 export interface IGridItem {
-  children: Node;
+  children: Element | JSX.Element | Array<Element | JSX.Element>;
   className?: string;
 
   [key: string]: any;
