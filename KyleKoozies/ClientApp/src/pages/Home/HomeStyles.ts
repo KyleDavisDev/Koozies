@@ -21,11 +21,11 @@ const HomeStyles = {
   mlAuto,
   description,
   textCenter: {
-    textAlign: "center !important",
+    textAlign: "center !important" as "center",
   },
   container: {
     ...container,
-    zIndex: "2",
+    zIndex: 2,
   },
   brand: {
     "& h1, & h4": {
@@ -124,7 +124,7 @@ const HomeStyles = {
   block: {
     color: "inherit",
     padding: "0.9375rem",
-    fontWeight: "500",
+    fontWeight: 500,
     fontSize: "12px",
     textTransform: "uppercase",
     borderRadius: "3px",

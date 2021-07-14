@@ -181,7 +181,7 @@ const HeaderStyles = theme => createStyles({
     visibility: "visible",
     overflowY: "visible",
     borderTop: "none",
-    textAlign: "left",
+    textAlign: "left" as "left",
     paddingRight: "0px",
     paddingLeft: "0",
     ...transition,
