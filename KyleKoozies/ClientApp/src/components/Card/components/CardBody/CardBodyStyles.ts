@@ -1,4 +1,4 @@
-﻿import { whiteColor, hexToRgb } from "../../theme/theme";
+﻿import { whiteColor, hexToRgb } from "../../../../theme/theme";
 
 const CardBodyStyles = {
   cardBody: {

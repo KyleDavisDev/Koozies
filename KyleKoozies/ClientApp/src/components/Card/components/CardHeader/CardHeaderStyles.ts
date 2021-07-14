@@ -7,7 +7,7 @@
   roseCardHeader,
   blackColor,
   hexToRgb,
-} from "../../theme/theme";
+} from "../../../../theme/theme";
 
 const CardHeaderStyle = {
   cardHeader: {
