@@ -8,12 +8,12 @@ const useStyles = makeStyles(CardHeaderStyles);
 
 export interface ICardHeader {
   className?: string;
-  color: "warning" | "success" | "danger" | "info" | "primary" | "rose";
-  plain: boolean;
-  image: boolean;
-  contact: boolean;
-  signup: boolean;
-  noShadow: boolean;
+  color?: "warning" | "success" | "danger" | "info" | "primary" | "rose";
+  plain?: boolean;
+  image?: boolean;
+  contact?: boolean;
+  signup?: boolean;
+  noShadow?: boolean;
   children: Element | JSX.Element | Array<Element | JSX.Element>;
 }
 
