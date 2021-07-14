@@ -9,9 +9,9 @@ import Parallax from "../../components/Parallax/Parallax";
 import Footer from "../../components/Footer/Footer";
 
 import SectionHero from "./components/SectionHero/SectionHero"
-import SectionLatestKoozies from "./components/SectionLatestKoozies/SectionLatestKoozies";
-import SectionProducts from "views/EcommercePage/Sections/SectionProducts.js";
-import SectionBlog from "views/EcommercePage/Sections/SectionBlog.js";
+// import SectionLatestKoozies from "./components/SectionLatestKoozies/SectionLatestKoozies";
+// import SectionProducts from "views/EcommercePage/Sections/SectionProducts.js";
+// import SectionBlog from "views/EcommercePage/Sections/SectionBlog.js";
 
 import HomeStyles from "./HomeStyles";
 
@@ -41,10 +41,10 @@ const Home: React.FC<IHome> = props => {
       <SectionHero />      
       
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <SectionLatestKoozies />
-        <SectionProducts />
+        {/*<SectionLatestKoozies />*/}
+        {/*<SectionProducts />*/}
       </div>
-      <SectionBlog />
+      {/*<SectionBlog />*/}
 
       <Footer theme="dark" />
         
