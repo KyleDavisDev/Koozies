@@ -14,13 +14,13 @@ import Button from "../../../../components/CustomButton/CustomButton";
 import gucci from "assets/img/examples/gucci.jpg";
 import tomFord from "assets/img/examples/tom-ford.jpg";
 import dolce from "assets/img/examples/dolce.jpg";
-import LatestOffersStyles from "./LatestOffersStyles";
+import SectionLatestKooziesStyles from "./SectionLatestKooziesStyles";
 
-const useStyles = makeStyles(LatestOffersStyles);
+const useStyles = makeStyles(SectionLatestKooziesStyles);
 
-export interface ILatestOffers {}
+export interface ISectionLatestKoozies {}
 
-const LatestOffers: React.FC<ILatestOffers> = props => {
+const SectionLatestKoozies: React.FC<ISectionLatestKoozies> = props => {
   const classes = useStyles();
 
   return (
@@ -138,4 +138,4 @@ const LatestOffers: React.FC<ILatestOffers> = props => {
     </div>
   );
 };
-export default LatestOffers;
+export default SectionLatestKoozies;

@@ -10,7 +10,7 @@
 
 import tooltipsStyle from "../../../../components/ToolTip/ToolTipStyles";
 
-const LatestOfferStyles = {
+const SectionLatestKooziesStyles = {
   cardTitle,
   container,
   ...tooltipsStyle,
@@ -46,4 +46,4 @@ const LatestOfferStyles = {
   },
 };
 
-export default LatestOfferStyles;
+export default SectionLatestKooziesStyles;
