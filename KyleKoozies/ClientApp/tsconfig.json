@@ -3,10 +3,16 @@
     "outDir": "./built/",
     "module": "esnext",
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "es5", "es2015", "es2016"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es5",
+      "es2015",
+      "es2016"
+    ],
     "sourceMap": true,
     "allowJs": true,
-    "jsx": "preserve",
+    "jsx": "react",
     "moduleResolution": "node",
     "rootDir": "src",
     "noImplicitReturns": true,
@@ -16,8 +22,12 @@
     "noUnusedLocals": false,
     "removeComments": true,
     "esModuleInterop": true,
-    "typeRoots": ["./node_modules/@types", "./src/@types/", "./@types/**/*"],
-    "baseUrl": "/",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/@types/",
+      "./@types/**/*"
+    ],
+    "baseUrl": "src",
     "skipLibCheck": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
@@ -25,7 +35,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true
   },
-  "include": ["./","./src/**/*", "./@types/**/*"],
-  "exclude": ["node_modules"]
+  "include": [
+    "./",
+    "./src/**/*",
+    "./@types/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
