@@ -13,24 +13,24 @@ import CardStyles from "./CardStyles";
 const useStyles = makeStyles(CardStyles);
 
 export interface ICard {
-  className: string;
+  className?: string;
   plain?: boolean;
   raised?: boolean;
   background?: boolean;
-  color: "primary" | "info" | "success" | "warning" | "danger" | "rose";
+  color?: "primary" | "info" | "success" | "warning" | "danger" | "rose";
   product?: boolean;
   children: Element | JSX.Element | Array<Element | JSX.Element>;
 }
 
 const Card: React.FC<ICard> = (props) => {
   const {
-    className,
+    className = "",
     children,
-    plain,
-    raised,
-    background,
-    color,
-    product,
+    plain = true,
+    raised = true,
+    background = false,
+    color = "primary",
+    product = true,
     ...rest
   } = props;
   
