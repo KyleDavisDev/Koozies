@@ -8,7 +8,7 @@ import GridItem from "../../components/GridItem/GridItem";
 import Parallax from "../../components/Parallax/Parallax";
 import Footer from "../../components/Footer/Footer";
 
-import SectionLatestOffers from "views/EcommercePage/Sections/SectionLatestOffers.js";
+import SectionLatestKoozies from "./components/SectionLatestKoozies/SectionLatestKoozies";
 import SectionProducts from "views/EcommercePage/Sections/SectionProducts.js";
 import SectionBlog from "views/EcommercePage/Sections/SectionBlog.js";
 
@@ -52,7 +52,7 @@ const Home: React.FC<IHome> = props => {
       </Parallax>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <SectionLatestOffers />
+        <SectionLatestKoozies />
         <SectionProducts />
       </div>
       <SectionBlog />
