@@ -52,7 +52,7 @@ const HomeStyles = {
     },
     "& form": { margin: "0px" },
     "&$subscribeLineImage:after": {
-      position: "absolute",
+      position: "absolute" as "absolute",
       zIndex: 1,
       width: "100%",
       height: "100%",
@@ -64,12 +64,12 @@ const HomeStyles = {
     },
   },
   subscribeLineImage: {
-    position: "relative",
+    position: "relative" as "relative",
     backgroundPosition: "top center",
     backgroundSize: "cover",
     "& $container": {
       zIndex: 2,
-      position: "relative",
+      position: "relative" as "relative",
     },
     "& $title": {
       color: whiteColor,
@@ -96,7 +96,7 @@ const HomeStyles = {
     width: "20%",
     marginRight: "5%",
     marginBottom: "5%",
-    float: "left",
+    float: "left" as "left",
   },
   list: {
     marginBottom: "0",
@@ -109,13 +109,13 @@ const HomeStyles = {
     width: "auto",
   },
   left: {
-    float: "left!important",
+    float: "left!important" as "left",
     display: "block",
   },
   right: {
     padding: "15px 0",
     margin: "0",
-    float: "right",
+    float: "right" as "right",
   },
   aClass: {
     textDecoration: "none",
@@ -126,10 +126,10 @@ const HomeStyles = {
     padding: "0.9375rem",
     fontWeight: 500,
     fontSize: "12px",
-    textTransform: "uppercase",
+    textTransform: "uppercase" as "uppercase",
     borderRadius: "3px",
     textDecoration: "none",
-    position: "relative",
+    position: "relative" as "relative",
     display: "block",
   },
 };
