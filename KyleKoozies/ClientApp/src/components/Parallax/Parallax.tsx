@@ -45,7 +45,7 @@ const Parallax: React.FC<IParallax> = (props) => {
   });
 
   const resetTransform = () => {
-    var windowScrollTop = window.pageYOffset / 3;
+    const windowScrollTop = window.pageYOffset / 3;
     setTransform("translate3d(0," + windowScrollTop + "px,0)");
   };
 
