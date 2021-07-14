@@ -7,7 +7,7 @@
   twitterColor,
   dribbbleColor,
   instagramColor,
-  hexToRgb
+  hexToRgb, blackColor
 } from "../../theme/theme";
 
 const FooterStyles = {
@@ -162,6 +162,48 @@ const FooterStyles = {
   },
   clearFix: {
     clear: "both" as "both"
+  },
+  block: {
+    color: "inherit",
+    padding: "0.9375rem",
+    fontWeight: 500,
+    fontSize: "12px",
+    textTransform: "uppercase" as "uppercase",
+    borderRadius: "3px",
+    textDecoration: "none",
+    position: "relative" as "relative",
+    display: "block",
+  },
+  socialFeed: {
+    "& p": {
+      display: "table-cell",
+      verticalAlign: "top",
+      overflow: "hidden",
+      paddingBottom: "10px",
+      maxWidth: 300,
+    },
+    "& i": {
+      fontSize: "20px",
+      display: "table-cell",
+      paddingRight: "10px",
+    },
+  },
+  img: {
+    width: "20%",
+    marginRight: "5%",
+    marginBottom: "5%",
+    float: "left" as "left",
+  },
+  imgRounded: {
+    borderRadius: "6px !important",
+  },
+  imgRaised: {
+    boxShadow:
+      "0 5px 15px -8px rgba(" +
+      hexToRgb(blackColor) +
+      ", 0.24), 0 8px 10px -5px rgba(" +
+      hexToRgb(blackColor) +
+      ", 0.2)",
   }
 };
 export default FooterStyles;
