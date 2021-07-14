@@ -43,10 +43,10 @@ export interface ICustomButton {
   justIcon?: boolean;
   fileButton?: boolean;
   children?: any;
-  className: string;
-  onClick?: ((event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void);
+  className?: string;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   href?: string;
-  target?: "_blank" | "self"
+  target?: "_blank" | "self";
 }
 
 const CustomButton = React.forwardRef<HTMLButtonElement, ICustomButton>((props, ref) => {
@@ -62,7 +62,7 @@ const CustomButton = React.forwardRef<HTMLButtonElement, ICustomButton>((props, 
     link,
     justIcon,
     fileButton,
-    className,
+    className = "",
     ...rest
   } = props;
   const classes = useStyles();
