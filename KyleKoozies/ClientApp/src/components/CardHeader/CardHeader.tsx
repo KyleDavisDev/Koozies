@@ -54,3 +54,5 @@ const CardHeader: React.FC<ICardHeader> = props => {
     </div>
   );
 };
+
+export default CardHeader;
