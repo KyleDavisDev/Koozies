@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Route } from 'react-router';
+import './assets/styles/custom.css'
 import Home from './pages/Home/Home';
 
 export default () => (

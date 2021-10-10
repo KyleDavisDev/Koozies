@@ -8,14 +8,14 @@ import GridItem from "../GridItem/GridItem";
 
 import FooterStyles from "./FooterStyles";
 
-import face1 from "assets/img/faces/card-profile6-square.jpg";
-import face2 from "assets/img/faces/christian.jpg";
-import face3 from "assets/img/faces/card-profile4-square.jpg";
-import face4 from "assets/img/faces/card-profile1-square.jpg";
-import face5 from "assets/img/faces/marc.jpg";
-import face6 from "assets/img/faces/kendall.jpg";
-import face7 from "assets/img/faces/card-profile5-square.jpg";
-import face8 from "assets/img/faces/card-profile2-square.jpg";
+// import face1 from "assets/img/faces/card-profile6-square.jpg";
+// import face2 from "assets/img/faces/christian.jpg";
+// import face3 from "assets/img/faces/card-profile4-square.jpg";
+// import face4 from "assets/img/faces/card-profile1-square.jpg";
+// import face5 from "assets/img/faces/marc.jpg";
+// import face6 from "assets/img/faces/kendall.jpg";
+// import face7 from "assets/img/faces/card-profile5-square.jpg";
+// import face8 from "assets/img/faces/card-profile2-square.jpg";
 
 const useStyles = makeStyles(FooterStyles);
 
@@ -75,42 +75,42 @@ const Footer: React.FC<IFooter> = props => {
                 <h5>Instagram Feed</h5>
                 <div>
                   <img
-                    src={face1}
+                    src={"#"}
                     className={classNames(classes.img, classes.imgRaised, classes.imgRounded)}
                     alt="..."
                   />
                   <img
-                    src={face2}
+                    src={"#"}
                     className={classNames(classes.img, classes.imgRaised, classes.imgRounded)}
                     alt="..."
                   />
                   <img
-                    src={face3}
+                    src={"#"}
                     className={classNames(classes.img, classes.imgRaised, classes.imgRounded)}
                     alt="..."
                   />
                   <img
-                    src={face4}
+                    src={"#"}
                     className={classNames(classes.img, classes.imgRaised, classes.imgRounded)}
                     alt="..."
                   />
                   <img
-                    src={face5}
+                    src={"#"}
                     className={classNames(classes.img, classes.imgRaised, classes.imgRounded)}
                     alt="..."
                   />
                   <img
-                    src={face6}
+                    src={"#"}
                     className={classNames(classes.img, classes.imgRaised, classes.imgRounded)}
                     alt="..."
                   />
                   <img
-                    src={face7}
+                    src={"#"}
                     className={classNames(classes.img, classes.imgRaised, classes.imgRounded)}
                     alt="..."
                   />
                   <img
-                    src={face8}
+                    src={"#"}
                     className={classNames(classes.img, classes.imgRaised, classes.imgRounded)}
                     alt="..."
                   />

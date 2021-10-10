@@ -16,7 +16,7 @@ const SectionHero: React.FC<ISectionHero> = props => {
   const classes = useStyles();
 
   return (
-    <Parallax image={require("../../../../../public/images/bg7.jpg").default} filter="dark" small>
+    <Parallax image={require("../../../../assets/images/bg7.jpg").default} filter="dark" small>
       <div className={classes.container}>
         <GridContainer>
           <GridItem md={8} sm={8} className={classNames(classes.mlAuto, classes.mrAuto, classes.textCenter)}>

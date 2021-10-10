@@ -22,34 +22,34 @@ export interface ICard {
   children: Element | JSX.Element | Array<Element | JSX.Element>;
 }
 
-const Card: React.FC<ICard> = (props) => {
+const Card: React.FC<ICard> = props => {
   const {
     className = "",
     children,
     plain = true,
-    raised = true,
+    raised = false,
     background = false,
-    color = "primary",
+    color,
     product = true,
     ...rest
   } = props;
-  
+
   const classes = useStyles();
   const cardClasses = classNames({
     [classes.card]: true,
     [classes.cardPlain]: plain,
     [classes.cardRaised]: raised,
     [classes.cardBackground]: background,
-    [classes[color]]: color,
+    // [classes[color]]: color,
     [classes.cardProduct]: product,
     [className]: className !== undefined
   });
-  
+
   return (
     <div className={cardClasses} {...rest}>
       {children}
     </div>
   );
-}
+};
 
 export default Card;

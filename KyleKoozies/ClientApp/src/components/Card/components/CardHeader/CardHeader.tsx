@@ -33,7 +33,7 @@ const CardHeader: React.FC<ICardHeader> = props => {
   const classes = useStyles();
   const cardHeaderClasses = classNames({
     [classes.cardHeader]: true,
-    [classes[color + "CardHeader"]]: color,
+    // [classes[color + "CardHeader"]]: color,
     [classes.cardHeaderPlain]: plain,
     [classes.cardHeaderImage]: image,
     [classes.cardHeaderContact]: contact,

@@ -1,0 +1,40 @@
+﻿{
+  "Koozies": [
+    {
+      "Name": "name1",
+      "Description": "description2",
+      "Images": {
+        "Bg" : "https://demos.creative-tim.com/material-kit-pro-react/static/media/gucci.2911723c.jpg",
+        "Sm" : "https://demos.creative-tim.com/material-kit-pro-react/static/media/gucci.2911723c.jpg"
+      },
+      "DateUploaded": 1633903561
+    },
+    {
+      "Name": "name2",
+      "Description": "description2",
+      "Images": {
+        "Bg" : "https://demos.creative-tim.com/material-kit-pro-react/static/media/gucci.2911723c.jpg",
+        "Sm" : "https://demos.creative-tim.com/material-kit-pro-react/static/media/gucci.2911723c.jpg"
+      },
+      "DateUploaded": 1633903261
+    }
+    ,{
+      "Name": "name3",
+      "Description": "description3",
+      "Images": {
+        "Bg" : "https://demos.creative-tim.com/material-kit-pro-react/static/media/gucci.2911723c.jpg",
+        "Sm" : "https://demos.creative-tim.com/material-kit-pro-react/static/media/gucci.2911723c.jpg"
+      },
+      "DateUploaded": 1633903621
+    }
+    ,{
+      "Name": "name4",
+      "Description": "description4",
+      "Images": {
+        "Bg" : "https://demos.creative-tim.com/material-kit-pro-react/static/media/gucci.2911723c.jpg",
+        "Sm" : "https://demos.creative-tim.com/material-kit-pro-react/static/media/gucci.2911723c.jpg"
+      },
+      "DateUploaded": 1633903626
+    }
+  ]
+}

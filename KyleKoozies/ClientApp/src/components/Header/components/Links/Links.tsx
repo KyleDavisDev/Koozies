@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { List } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import ListItem from "@material-ui/core/ListItem";
+import Icon from "@material-ui/core/Icon";
 
 // @material-ui/icons
 import Apps from "@material-ui/icons/Apps";
